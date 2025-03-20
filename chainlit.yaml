@@ -1,0 +1,28 @@
+chainlit:2.0.0
+
+# interface settings
+
+ui:
+  name:"Gemini Chatbot"
+  description:"A chatbot built with Gemini"
+
+# Message Settings
+default_expand_message:true
+
+# auth settings
+auth:
+  required:true
+  providers:
+    - github
+    - google
+
+# OAuth configuration
+oauth_providers:
+  github:
+    client_id: ${OAUTH_GITHUB_CLIENT_ID}
+    client_secret: ${OAUTH_GITHUB_CLIENT_SECRET}
+  google:
+    client_id: ${OAUTH_GOOGLE_CLIENT_ID}
+    client_secret: ${OAUTH_GOOGLE_CLIENT_SECRET}
+
+
